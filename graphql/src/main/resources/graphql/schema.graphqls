@@ -1,0 +1,25 @@
+type Query {
+    # Basic hello test query
+    hello: String
+
+    # Hello with a name parameter
+    helloUser(name: String!): String
+
+    # Fetch a user by ID
+    getUser(id: ID!): User
+
+    # Fetch all users
+    getAllUsers: [User]
+}
+
+type Mutation {
+    # Create a new user
+    createUser(name: String!, email: String!): User
+}
+
+# User type definition
+type User {
+    id: ID!
+    name: String!
+    email: String!
+}
